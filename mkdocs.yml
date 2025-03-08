@@ -10,9 +10,14 @@ repo_name: Jefedi/test-mcdocs
 # Navigation du site
 nav:
   - Accueil: index.md
+  - Blog:
+    - blog/index.md
+
+
 
 # Thème du site
 theme:
+  language: fr
   name: material
   logo: assets/dyanasty8.png
   icon:
@@ -20,6 +25,7 @@ theme:
     admonition:
       alert: material/alert
   features:
+    - navigation.indexes
     - search.suggest
     - search.highlight
     - search.share
@@ -64,6 +70,18 @@ plugins:
   - glightbox
   - git-revision-date-localized:
       type: timeago
+  - blog:
+      enabled: true
+      post_date_format: long
+      post_url_date_format: yyyy/MM
+  - rss:
+      match_path: blog/posts/.*
+      date_from_meta:
+        as_creation: date
+      categories:
+        - categories
+        - tags
+
 
 # Paramètres supplémentaires
 extra:
