@@ -1,5 +1,6 @@
 # Nom du site
 site_name: Test Site
+site_url: http://127.0.0.1:8000
 
 # URL du dépôt GitHub
 repo_url: https://github.com/Jefedi/Test-mcdocs.git
@@ -63,13 +64,14 @@ markdown_extensions:
   - pymdownx.mark
   - pymdownx.tilde
 
-# Plugins
+
 plugins:
   - search
   - tags
   - glightbox
   - git-revision-date-localized:
       type: timeago
+  - meta
   - blog:
       enabled: true
       post_date_format: long
@@ -81,6 +83,7 @@ plugins:
       categories:
         - categories
         - tags
+
 
 
 # Paramètres supplémentaires

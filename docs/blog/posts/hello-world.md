@@ -4,6 +4,7 @@ date: 2025-03-08
 categories:
   - Hello
   - World
+pin: true
 ---
 
 # Hello world!

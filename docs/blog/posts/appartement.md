@@ -1,8 +1,16 @@
 ---
-title: "Appartement"
+title: Appartenent
 date: 2025-03-08
-author: "Jefe"
-tags: ["real estate", "blog"]
+categories:
+  - Appartement
+tags:
+  - Location
+  - Vente
+authors: 
+    - Jefedi
+links:
+  - blog/posts/hello-world.md
+
 ---
 
 
@@ -11,6 +19,9 @@ tags: ["real estate", "blog"]
 ## **À Vendre : Appartement Modeste**
 
 Découvrez cet appartement moderne et sécurisé, niché au cœur de Los Santos, offrant un cadre de vie idéal pour ceux qui recherchent confort et tranquillité. Cet espace de vie allie élégance et fonctionnalité, parfait pour les citoyens exigeants de Los Santos.
+
+<!-- more -->
+...
 
 **Caractéristiques :**
 
