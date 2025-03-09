@@ -19,7 +19,7 @@ nav:
 theme:
   language: fr
   name: material
-  logo: assets/dyanasty8.png
+  logo: assets/test.png
   icon:
     repo: fontawesome/brands/github
     admonition:
