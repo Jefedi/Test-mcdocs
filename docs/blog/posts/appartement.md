@@ -8,9 +8,6 @@ tags:
   - Vente
 authors: 
     - Jefedi
-links:
-  - blog/posts/hello-world.md
-
 ---
 
 
