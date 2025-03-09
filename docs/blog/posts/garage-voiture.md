@@ -2,7 +2,7 @@
 title: Garage de Voiture
 date: 2025-03-08
 categories:
-  - garage Voiture
+  - Garage Voiture
 tags:
   - Location
   - Vente

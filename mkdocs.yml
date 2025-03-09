@@ -11,8 +11,7 @@ repo_name: Jefedi/test-mcdocs
 
 # Navigation du site
 nav:
-  - Accueil: index.md
-  - Blog:
+  - Accueil:
     - blog/index.md
 
 # Paramètres de la documentation
