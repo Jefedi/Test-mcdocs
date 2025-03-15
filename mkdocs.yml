@@ -17,38 +17,40 @@ nav:
 # Paramètres de la documentation
 # Thème du site
 theme:
-  language: fr
   name: material
-  custom_dir: overrides
-  logo: assets/test.png
-  icon:
-    repo: fontawesome/brands/github
-    admonition:
-      alert: material/alert
   features:
-    - navigation.indexes
+    - navigation.tabs
+    - navigation.sections
+    - toc.integrate
+    - navigation.top
     - search.suggest
     - search.highlight
-    - search.share
-    # - navigation.footer
-    # - navigation.tabs
-    # - navigation.tabs.sticky
+    - content.tabs.link
+    - content.code.annotation
+
   palette:
-    # Palette toggle for automatic mode
-    - media: "(prefers-color-scheme: light)"
-      scheme: default
-      primary: white
-      accent: grey
+    - scheme: default
       toggle:
         icon: material/toggle-switch-off-outline
         name: Switch to dark mode
-    - media: "(prefers-color-scheme: dark)"
-      scheme: slate
-      primary: black
-      accent: light blue
+      primary: indigo
+      accent: indigo
+    - scheme: slate
       toggle:
         icon: material/toggle-switch
         name: Switch to light mode
+      primary: indigo
+      accent: indigo
+
+extra:
+  annotations:
+    json:
+      icon: material/code-json
+      title: JSON
+    yaml:
+      icon: material/file-code
+      title: YAML
+
 
 # Extensions Markdown
 markdown_extensions:
@@ -84,25 +86,6 @@ plugins:
         - categories
         - tags
 
-
-
-# Paramètres supplémentaires
-extra:
-  social:
-    - icon: fontawesome/brands/discord
-      link: https://discord.gg/JGudwhRJ3t
-  version:
-    provider: Jefe
-  consent:
-    title: Consentement aux cookies
-    actions:
-      - accept
-      - reject
-      - manage
-    description: >- 
-      Nous utilisons des cookies pour reconnaître vos visites répétées et vos préférences, ainsi que pour mesurer l'efficacité de notre documentation et savoir si les utilisateurs trouvent ce qu'ils recherchent. En donnant votre consentement, vous nous aidez à améliorer notre documentation.
-  copyright: Copyright &copy; 2025 - 2025 Jefe
-  generator: false
 
 # Schéma pour le serveur de langage YAML
 yaml-language-server: $schema=https://squidfunk.github.io/mkdocs-material/schema.json
