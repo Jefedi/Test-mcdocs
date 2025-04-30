@@ -1,74 +1,55 @@
 # Nom du site
-site_name: Los Galactique
-site_url: https://losgalactiquerp.jefe.ovh
+site_name: Test Site
+site_url: https://test.jefe.ovh
 
 # URL du dépôt GitHub
-repo_url: https://github.com/Jefedi/los-galactique-reglement.git
+repo_url: https://github.com/Jefedi/Test-mcdocs.git
 
 # Nom du dépôt GitHub
-repo_name: Jefedi/Los Galactique
+repo_name: Jefedi/test-mcdocs
+
 
 # Navigation du site
 nav:
-  - Accueil: index.md
-  - Recrutment: recrutement-los-galactique-rp.md
-  - Règlement HRP: 
-    - reglement-hrp/index.md
-    - reglement-hrp/reglement-ticket.md
-    - reglement-hrp/reglement-streameur.md
-    - reglement-hrp/reglement-discord.md
-  - Règlement Global:
-    - reglement-global/index.md
-    - reglement-global/lexique-rp.md
-    - reglement-global/notions-de-base-rp.md
-    - reglement-global/regles-basiques.md
-    - reglement-global/services-publiques.md
-    - reglement-global/zone-safe.md
-  - Règlement RP Légal:
-    - reglement-rp-legal/index.md
-    - reglement-rp-legal/reglement-sasp-bcso/index.md
-    - reglement-rp-legal/reglement-sasp-bcso/reglement-des-forces-de-lordre.md
-    - reglement-rp-legal/reglement-sasp-bcso/defcon.md
-    - reglement-rp-legal/reglement-ems.md
-    - reglement-rp-legal/reglement-entreprise.md
-  - Règlement RP Illégal:
-    - reglement-rp-illegal/index.md
-    - reglement-rp-illegal/illegal.md
-    - reglement-rp-illegal/regles-generales.md
   - Blog:
     - blog/index.md
 
-
+# Paramètres de la documentation
 # Thème du site
 theme:
-  language: fr
   name: material
-  logo: assete/logo/icone-los-galac.png
-  icon:
-    repo: fontawesome/brands/github
   features:
+    - navigation.tabs
+    - navigation.sections
+    - toc.integrate
+    - navigation.top
     - search.suggest
     - search.highlight
-    - search.share
-    - content.code.copy
-    # - navigation.footer
-    # - navigation.tabs
-    # - navigation.tabs.sticky
+    - content.tabs.link
+    - content.code.annotation
+
   palette:
-    - media: "(prefers-color-scheme: light)"
-      scheme: default
-      primary: white
-      accent: grey
+    - scheme: default
       toggle:
         icon: material/toggle-switch-off-outline
         name: Switch to dark mode
-    - media: "(prefers-color-scheme: dark)"
-      scheme: slate
-      primary: black
-      accent: light blue
+      primary: indigo
+      accent: indigo
+    - scheme: slate
       toggle:
         icon: material/toggle-switch
         name: Switch to light mode
+      primary: indigo
+      accent: indigo
+
+extra:
+  annotations:
+    json:
+      icon: material/code-json
+      title: JSON
+    yaml:
+      icon: material/file-code
+      title: YAML
 
 
 # Extensions Markdown
@@ -77,100 +58,37 @@ markdown_extensions:
   - pymdownx.details
   - pymdownx.superfences
   - attr_list
-  - pymdownx.tabbed:
-      alternate_style: true
-  - pymdownx.highlight:
-      anchor_linenums: true
-      line_spans: __span
-      pygments_lang_class: true
-  - pymdownx.inlinehilite
-  - pymdownx.snippets
+  - md_in_html
+  - pymdownx.blocks.caption
+  - pymdownx.critic
+  - pymdownx.caret
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.tilde
 
 
-# Plugins
 plugins:
   - search
   - tags
+  - glightbox
   - git-revision-date-localized:
       type: timeago
+  - meta
   - blog:
-      authors_profiles: true
-      authors_profiles_url_format: "author/{name}"
-
-      draft_on_serve: false
-      draft_if_future_date: true
-
-      archive: false
-      archive_name: Archive
-      archive_date_format: MMMM yyyy
-      archive_url_date_format: yyyy/MM
-
-      categories: true
-      categories_name: Categories
-      categories_url_format: "category/{slug}"
-      categories_sort_reverse: true
-      # categories_allowed:
-      #   - Guide
-
-      post_date_format: full
+      enabled: true
+      post_date_format: long
       post_url_date_format: yyyy/MM
-      post_readtime_words_per_minute: 250
-
   - rss:
-      match_path: blog/posts/.* 
+      match_path: blog/posts/.*
       date_from_meta:
         as_creation: date
       categories:
         - categories
-        - tags 
-
-
-# Paramètres supplémentaires
-extra:
-  analytics:
-
-    feedback:
-      title: Cette page était-elle utile ?
-      ratings:
-        - icon: material/emoticon-happy-outline
-          name: Cette page était utile.
-          data: 1
-          note: >-
-            Merci pour votre retour !
-        - icon: material/emoticon-sad-outline
-          name: Cette page pourrait être améliorée.
-          data: 0
-          note: >- 
-            Merci pour votre retour ! Aidez-nous à améliorer cette page en
-            en utilisant notre <a href="https://docs.google.com/forms/d/e/1FAIpQLSduFDRvg0ZlQwTcRgDvfDAQxh3XqAUh6wrHXzweRRiUDIPxhg/viewform" target="_blank" rel="formulaire">formulaire de retour</a>.
-  social:
-    - icon: fontawesome/brands/discord
-      link: https://discord.gg/JGudwhRJ3t
-    - icon: material/rss-box
-      link: https://losgalactiquerp.jefe.ovh/feed_rss_updated.xml
-  version:
-    provider: Jefe
-  consent:
-    title: Consentement aux cookies
-    actions:
-      - accept
-      - reject
-      - manage
-    description: >- 
-      Nous utilisons des cookies pour reconnaître vos visites répétées et vos préférences, ainsi que pour mesurer l'efficacité de notre documentation et savoir si les utilisateurs trouvent ce qu'ils recherchent. En donnant votre consentement, vous nous aidez à améliorer notre documentation.
-  copyright: Copyright &copy; 2025 - 2025 Jefe
-  generator: true
-
-
-
-# Fichiers CSS supplémentaires
-# extra_css:
-#   - stylesheets/extra.css
-extra_javascript:
-  - javascripts/feedback.js
-
-
+        - tags
 
 
 # Schéma pour le serveur de langage YAML
 yaml-language-server: $schema=https://squidfunk.github.io/mkdocs-material/schema.json
+
+
+
